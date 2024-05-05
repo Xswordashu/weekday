@@ -44,13 +44,13 @@ const JobCard = ({
             <div >
                <Typography sx={{fontSize:'18px',fontWeight:'600', fontFamily:' "Raleway", sans-serif;'}}>About Company</Typography>
                <Typography sx={{fontSize:'17px',fontWeight:'800', fontFamily:' "Raleway", sans-serif;'}}>About us</Typography>
-               <div style={{maxHeight:'100px', overflow:'hidden', position:'relative'}}>
+               <div style={{maxHeight:'300px', overflow:'hidden', position:'relative'}}>
                <Typography sx={{ fontSize:'17px',fontWeight:'500',fontFamily:' "Raleway", sans-serif;'}}>{jobDetails} Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, architecto nulla quod dolorum ab velit numquam aliquid facere sapiente, consectetur ipsum. Voluptatum alias sed vitae quod explicabo quo, sapiente architecto.</Typography>
                 
                     
                </div>
-                   <div className='view font'>
-                        <a href={jdlink}>View Job</a>
+                   <div className='view font' >
+                        <a href={jdlink} className='link' style={{textDecoration:'none', color:'#6f6ae4', fontWeight:'500'}}>View Job</a>
                     </div>
             </div>
 

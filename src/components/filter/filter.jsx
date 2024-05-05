@@ -5,6 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateFilters } from '../../slice/filterSlice';
+import './filter.css';
 const Filter = () => {
     console.log('filter component loading')
     const filter = useSelector(state => state.filter);
@@ -18,7 +19,7 @@ const Filter = () => {
     }
   return (
       <>
-      <div >
+      <div className='filter'>
       <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
       <InputLabel id="demo-select-small-role">Roles</InputLabel>
       <Select

@@ -5,6 +5,11 @@
   
 }
 
+.link{
+  font-size: x-large;
+  color: '#6f6ae4'
+}
+
 .font{
   font-family: "Raleway", sans-serif;
 }
@@ -31,7 +36,7 @@
   .view{
     backdrop-filter: blur(1px);
     position: relative;
-    top: -44px;
+    top: -36px;
     /* left: -3px; */
     opacity: 45px;
     /* background-color: #fff; */
@@ -46,7 +51,7 @@
 
   @media (min-width: 900px) {
     .parent{
-       margin: 5px;
+       margin: 20px 10px 20px 10px;
     }
   }
 
