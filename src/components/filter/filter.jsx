@@ -24,8 +24,8 @@ const Filter = () => {
       <Select
         
         id="demo-select-role"
-        //value={filter[roles] ? filter.roles : ''}
-         value=''
+        value={filter.roles ? filter.roles : ''}
+         
         label="Roles"
         onChange={handleChange}
         name='roles'
@@ -46,8 +46,8 @@ const Filter = () => {
       <Select
         
         id="demo-select-employee"
-        //value={filter.numOfEmployee ? filter.numOfEmployee : ''}
-        value=''
+        value={filter.numOfEmployee ? filter.numOfEmployee : ''}
+        
         label="number of employees"
         onChange={handleChange}
         name='numOfEmployee'
@@ -68,8 +68,8 @@ const Filter = () => {
       <Select
         
         id="demo-select-experience"
-        //value={filter.numOfEmployee ? filter.numOfEmployee : ''}
-        value=''
+        value={filter.experience ? filter.experience : ''}
+        
         label="experience"
         onChange={handleChange}
         name='experience'
@@ -89,8 +89,8 @@ const Filter = () => {
       <Select
         
         id="demo-select-location"
-        //value={filter.numOfEmployee ? filter.numOfEmployee : ''}
-        value=''
+        value={filter.location ? filter.location : ''}
+        //value=''
         label="location"
         onChange={handleChange}
         name='location'
@@ -110,8 +110,8 @@ const Filter = () => {
       <Select
         
         id="demo-select-salary"
-        //value={filter.numOfEmployee ? filter.numOfEmployee : ''}
-        value=''
+        value={filter.salary ? filter.salary : ''}
+        
         label="minimum base pay salary"
         onChange={handleChange}
         name='salary'

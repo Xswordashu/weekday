@@ -12,7 +12,7 @@ const JobCard = ({
    minExperience,
    logo,
    jdlink}) => {
-     console.log('url', jobDetails);
+    // console.log('url', jobDetails);
   return (
      <>
        <div className='parent'>

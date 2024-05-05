@@ -4,8 +4,9 @@ import Filter from './components/filter/filter';
 import { useEffect, useState, useRef } from 'react';
 import JobCard from './components/card/jobCard';
 import { Grid } from '@mui/material';
+//import { useSelector, useDispatch } from 'react-redux';
 function App() {
-   
+  const filter = useSelector(state => state.filter);
   const [jobs, setJobs] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(0);
@@ -29,7 +30,7 @@ function App() {
     
     const body = JSON.stringify({
       "limit": 10,
-      "offset": page
+      "offset": page*10
      });
 
      const requestOptions = {
@@ -79,9 +80,28 @@ function App() {
      <Grid container sx={{maxWidth:'1000px'}}>
        {
          jobs.map((job,index)=>{
-             //console.log('chil', job);
-             return (
+            // console.log('child', job);
+             let flag = true;
+             Object.keys(filter).forEach(key=>{
+                // if(filter.key == '')
+                //   return;
+                //console.log('keys', key)
+                if(key == 'roles' &&  filter.roles!='' && job.jobRole != filter.roles)
+                 flag = false;
+                //console.log('roles', key.roles);
+                if(key == 'experience' && filter.experience!='' && job.minExp < filter.experience)
+                 flag = false;
 
+                if(key == 'location' && filter.location!=''  && job.location != filter.location)
+                  flag = false;
+
+                if(key == 'salary' && filter.salary!='' && job.minJdSalary <= filter.salary)
+                  flag = false;
+             })
+
+             if(flag)
+             return (
+              
               <Grid item xs={12} md={4} lg={4} key={index} sx={{margin:'auto'}} >
                 <JobCard 
                 name={job.companyName}
