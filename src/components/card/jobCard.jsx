@@ -15,7 +15,7 @@ const JobCard = ({
      console.log('url', jobDetails);
   return (
      <>
-       <div style={{maxWidth:'320px' , marginBottom:'5px'}}>
+       <div className='parent'>
        <Paper sx={{padding:'20px'}}>
            <Paper className='posted' sx={{borderRadius:'20px'}} elevation={2}>
                 ⏳ Posted 6 days ago 

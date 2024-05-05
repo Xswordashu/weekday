@@ -18,6 +18,7 @@ const Filter = () => {
     }
   return (
       <>
+      <div >
       <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
       <InputLabel id="demo-select-small-role">Roles</InputLabel>
       <Select
@@ -124,6 +125,8 @@ const Filter = () => {
         <MenuItem value={1}>1 LPA</MenuItem>
       </Select>
     </FormControl>
+     
+    </div>
 
     
       </>

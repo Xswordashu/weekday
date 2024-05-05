@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import Filter from './components/filter/filter';
 import { useEffect, useState, useRef } from 'react';
 import JobCard from './components/card/jobCard';
+import { Grid } from '@mui/material';
 function App() {
    
   const [jobs, setJobs] = useState([]);
@@ -74,13 +75,14 @@ function App() {
   return (
     <>
      <Filter/>
-     <div style={{display:'flex', flexWrap:'wrap'}}>
+     <div style={{display:'flex', justifyContent:'center'}}>
+     <Grid container sx={{maxWidth:'1000px'}}>
        {
          jobs.map((job,index)=>{
              //console.log('chil', job);
              return (
 
-              <div key={index} >
+              <Grid item xs={12} md={4} lg={4} key={index} sx={{margin:'auto'}} >
                 <JobCard 
                 name={job.companyName}
                 role={job.jobRole}
@@ -92,11 +94,12 @@ function App() {
                 logo={job.logoUrl}
                 jdlink={job.jdLink}
                 />
-              </div>
+              </Grid>
                 
              )
          })
        }
+       </Grid>
        </div>
        {hasMore && 
             <div ref={elementRef} style={{textAlign: 'center'}}>Load MOre Items...</div>

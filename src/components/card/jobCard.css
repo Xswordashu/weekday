@@ -1,3 +1,10 @@
+.parent{
+  max-width: 400px;
+  margin:  10px auto;
+  
+  
+}
+
 .font{
   font-family: "Raleway", sans-serif;
 }
@@ -36,3 +43,12 @@
     opacity: 1;
 
   }
+
+  @media (min-width: 900px) {
+    .parent{
+       margin: 5px;
+    }
+  }
+
+  
+
