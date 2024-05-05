@@ -122,7 +122,7 @@ function App() {
        </Grid>
        </div>
        {hasMore && 
-            <div ref={elementRef} style={{textAlign: 'center'}}>Load MOre Items...</div>
+            <div ref={elementRef} style={{textAlign: 'center', fontWeight:'400'}}>Loading More Jobs for You...</div>
         }
     </>
   )
