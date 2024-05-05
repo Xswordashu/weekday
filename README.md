@@ -8,8 +8,11 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 - (npm run dev) Command to run the application locally after installing the dependencies.
+  
 
   Responsiveness -> UI is responsive for both desktop and mobile screens
+
+  
   Code Reusibility -> I have create a slice for filters so that it can be accessed from any component
                    -> I have implemented different components like jobcards, filters so code is easy to understand
 
