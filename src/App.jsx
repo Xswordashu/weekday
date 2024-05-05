@@ -2,6 +2,7 @@ import './App.css'
 import { useSelector, useDispatch } from 'react-redux'
 import Filter from './components/filter/filter';
 import { useEffect } from 'react';
+import JobCard from './components/card/jobCard';
 function App() {
    
   
@@ -29,6 +30,7 @@ function App() {
   return (
     <>
      <Filter/>
+     <JobCard/>
     </>
   )
 }
